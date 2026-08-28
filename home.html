@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Level: Unlimited</title>
+<meta name="description" content="A Saiyan-powered personal site — training log, project radar, and a scouter that never lies.">
+
+<!-- Fonts: a condensed impact face for headlines, a HUD-flavored sans for body/UI -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ambient energy field behind everything -->
+<div class="aura-field" aria-hidden="true">
+  <div class="aura-ring ring-1"></div>
+  <div class="aura-ring ring-2"></div>
+  <div class="aura-ring ring-3"></div>
+</div>
+
+<header class="site-nav">
+  <a href="#top" class="brand">POWER<span>LEVEL</span></a>
+  <nav aria-label="Primary">
+    <a href="#log">Training Log</a>
+    <a href="#radar">Dragon Radar</a>
+    <a href="#contact">Signal</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO / SCOUTER ============ -->
+  <section class="hero" id="hero">
+    <div class="scouter-hud" role="group" aria-label="Power level scanner">
+      <div class="scouter-lens">
+        <div class="scouter-crosshair" aria-hidden="true"></div>
+        <span class="scouter-label">SCANNING TARGET</span>
+        <span class="scouter-value" id="scouterValue">0</span>
+        <span class="scouter-class" id="scouterClass">— STANDBY —</span>
+      </div>
+      <button class="power-btn" id="powerBtn" type="button">
+        Power Up
+      </button>
+    </div>
+
+    <h1 class="hero-title">
+      PUSH PAST<br>
+      <span class="ki-text">YOUR LIMIT</span>
+    </h1>
+    <p class="hero-sub">
+      Welcome to my corner of the universe — built one training arc at a time.
+      Replace this line with your own tagline.
+    </p>
+    <a href="#log" class="scroll-cue" aria-label="Scroll to training log">▾</a>
+  </section>
+
+  <!-- ============ ABOUT / TRAINING LOG ============ -->
+  <section class="log" id="log">
+    <div class="log-copy reveal">
+      <span class="eyebrow">Training Log</span>
+      <h2>About the Fighter</h2>
+      <p>
+        Swap this paragraph for your own bio. Talk about what you build,
+        what you're learning, or what arc you're currently grinding through.
+        The stat panel to the side is fully editable in <code>index.html</code> —
+        change the labels, values, and bar widths to whatever fits you.
+      </p>
+      <p>
+        This template ships lean: three files, no build step, no framework.
+        Drop it straight into a GitHub Pages repo and go.
+      </p>
+    </div>
+
+    <div class="stat-panel reveal" aria-label="Stat sheet">
+      <div class="stat-row">
+        <span class="stat-name">Power Level</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:92%"></div></div>
+        <span class="stat-num">92</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-name">Focus</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:78%"></div></div>
+        <span class="stat-num">78</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-name">Speed</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:85%"></div></div>
+        <span class="stat-num">85</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-name">Discipline</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:97%"></div></div>
+        <span class="stat-num">97</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS / DRAGON RADAR ============ -->
+  <section class="radar" id="radar">
+    <span class="eyebrow center">Dragon Radar</span>
+    <h2 class="center">Projects Located</h2>
+    <p class="radar-sub center">Seven signals detected. Each one grants a wish — click to view.</p>
+
+    <div class="orb-grid">
+      <!-- Repeat/edit this article block per project. data-stars sets the star count 1–7 -->
+      <a class="orb-card reveal" href="#" data-stars="1">
+        <span class="orb" style="--n:1"><span class="orb-stars">★</span></span>
+        <span class="orb-title">Project One</span>
+        <span class="orb-desc">One-line description of what it does.</span>
+      </a>
+      <a class="orb-card reveal" href="#" data-stars="2">
+        <span class="orb" style="--n:2"><span class="orb-stars">★★</span></span>
+        <span class="orb-title">Project Two</span>
+        <span class="orb-desc">One-line description of what it does.</span>
+      </a>
+      <a class="orb-card reveal" href="#" data-stars="3">
+        <span class="orb" style="--n:3"><span class="orb-stars">★★★</span></span>
+        <span class="orb-title">Project Three</span>
+        <span class="orb-desc">One-line description of what it does.</span>
+      </a>
+      <a class="orb-card reveal" href="#" data-stars="4">
+        <span class="orb" style="--n:4"><span class="orb-stars">★★★★</span></span>
+        <span class="orb-title">Project Four</span>
+        <span class="orb-desc">One-line description of what it does.</span>
+      </a>
+      <a class="orb-card reveal" href="#" data-stars="5">
+        <span class="orb" style="--n:5"><span class="orb-stars">★★★★★</span></span>
+        <span class="orb-title">Project Five</span>
+        <span class="orb-desc">One-line description of what it does.</span>
+      </a>
+      <a class="orb-card reveal" href="#" data-stars="6">
+        <span class="orb" style="--n:6"><span class="orb-stars">★★★★★★</span></span>
+        <span class="orb-title">Project Six</span>
+        <span class="orb-desc">One-line description of what it does.</span>
+      </a>
+      <a class="orb-card reveal" href="#" data-stars="7">
+        <span class="orb" style="--n:7"><span class="orb-stars">★★★★★★★</span></span>
+        <span class="orb-title">Project Seven</span>
+        <span class="orb-desc">One-line description of what it does.</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="signal" id="contact">
+    <div class="signal-inner reveal">
+      <span class="eyebrow">Open Channel</span>
+      <h2>Send a Signal</h2>
+      <p>Swap these for your real links.</p>
+      <div class="signal-links">
+        <a href="mailto:you@example.com">Email</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://discord.gg/" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <p>Built with zero frameworks and one training montage. &copy; <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
