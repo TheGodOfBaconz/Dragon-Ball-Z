@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Power Level: Unlimited — A Dragon Ball Z Fan Page</title>
-<meta name="description" content="A Dragon Ball Z fan page — character facts, a power tier breakdown, and a scouter that tells you which Z-Fighter you are.">
+<title>DBZ Fansite</title>
+<meta name="description" content="A homemade Dragon Ball Z fansite — character info, trivia, a power scanner, and a clicker game.">
 
-<!-- Fonts: a condensed impact face for headlines, a HUD-flavored sans for body/UI -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
 </head>
 <body>
 
-<!-- Ambient energy field behind everything -->
 <div class="aura-field" aria-hidden="true">
   <div class="aura-ring ring-1"></div>
   <div class="aura-ring ring-2"></div>
@@ -23,11 +21,12 @@
 </div>
 
 <header class="site-nav">
-  <a href="#top" class="brand">POWER<span>LEVEL</span></a>
+  <a href="#top" class="brand">DBZ<span>FANSITE</span></a>
   <nav aria-label="Primary">
-    <a href="#log">Trivia</a>
-    <a href="#radar">Fighter Roster</a>
-    <a href="#contact">Signal</a>
+    <a href="#trivia">Trivia</a>
+    <a href="#roster">Characters</a>
+    <a href="game.html">Game</a>
+    <a href="#discord">Discord</a>
   </nav>
 </header>
 
@@ -35,7 +34,7 @@
 
   <!-- ============ HERO / SCOUTER ============ -->
   <section class="hero" id="hero">
-    <div class="scouter-hud" role="group" aria-label="Z-Fighter power scanner">
+    <div class="scouter-hud" role="group" aria-label="Power scanner">
       <div class="scouter-lens">
         <div class="scouter-crosshair" aria-hidden="true"></div>
         <span class="scouter-label">SCANNING TARGET</span>
@@ -45,42 +44,43 @@
       <button class="power-btn" id="powerBtn" type="button">
         Scan My Power
       </button>
-      <p class="scouter-hint">Find out which Z-Fighter your power level matches.</p>
+      <p class="scouter-hint">Hit the button and find out which fighter you'd be.</p>
     </div>
 
     <h1 class="hero-title">
-      DRAGON BALL Z<br>
-      <span class="ki-text">FAN ZONE</span>
+      STILL NOT<br>
+      <span class="ki-text">OVER IT</span>
     </h1>
     <p class="hero-sub">
-      A tribute to the Z-Fighters — trivia, power tiers, and a roster of the
-      warriors who've spent decades screaming their way through transformations.
+      Put this page together because I keep rewatching Dragon Ball Z and
+      needed somewhere to dump everything I know about it. Character info,
+      random trivia, and a clicker game because why not.
     </p>
-    <a href="#log" class="scroll-cue" aria-label="Scroll to trivia">▾</a>
+    <a href="#trivia" class="scroll-cue" aria-label="Scroll down">▾</a>
   </section>
 
   <!-- ============ TRIVIA / POWER TIERS ============ -->
-  <section class="log" id="log">
+  <section class="log" id="trivia">
     <div class="log-copy reveal">
-      <span class="eyebrow">Series Trivia</span>
-      <h2>Spotlight: Goku</h2>
+      <span class="eyebrow">Goku, obviously</span>
+      <h2>The one everyone knows</h2>
       <p>
-        Goku was born Kakarot on the planet Vegeta and sent to Earth as an
-        infant, where a childhood head injury wiped out the aggressive
-        Saiyan instincts he was meant to grow up with. Raised by Grandpa
-        Gohan, he became Earth's most unlikely protector — and its most
-        enthusiastic eater.
+        Born Kakarot on planet Vegeta, sent to Earth as a baby, and then a
+        head injury as a toddler basically saved the planet — it wiped the
+        aggressive Saiyan instincts he was supposed to grow up with. Grandpa
+        Gohan raised him in the mountains, and somehow that turned into
+        Earth's strongest defender who still eats like it's a competitive
+        sport.
       </p>
       <p>
-        His signature move, the Kamehameha, was taught to him by Master
-        Roshi. Goku would go on to popularize the Super Saiyan
-        transformation, a golden-haired power surge that changed the shape
-        of the entire franchise.
+        Master Roshi taught him the Kamehameha early on, and it's been his
+        go-to move ever since. He's also the reason "Super Saiyan" became a
+        thing people say in real life.
       </p>
     </div>
 
-    <div class="stat-panel reveal" aria-label="Illustrative power tier chart">
-      <span class="stat-panel-title">Power Tiers (illustrative, not canon numbers)</span>
+    <div class="stat-panel reveal" aria-label="Power tier chart">
+      <span class="stat-panel-title">roughly how the power scaling goes (not official numbers, just vibes)</span>
       <div class="stat-row">
         <span class="stat-name">Base Form</span>
         <div class="stat-bar"><div class="stat-fill" style="--pct:20%"></div></div>
@@ -104,61 +104,161 @@
     </div>
   </section>
 
-  <!-- ============ FIGHTER ROSTER ============ -->
-  <section class="radar" id="radar">
-    <span class="eyebrow center">Fighter Roster</span>
-    <h2 class="center">Seven Z-Fighters</h2>
-    <p class="radar-sub center">A quick-fact roster of the series' core cast.</p>
+  <!-- ============ RANDOM FACTS ============ -->
+  <section class="facts">
+    <span class="eyebrow center">Stuff I've picked up over the years</span>
+    <h2 class="center">Random facts</h2>
+    <ul class="facts-list reveal">
+      <li>Every Saiyan's name is a pun on a vegetable — Vegeta, Kakarot (carrot), Broly (broccoli), Radish/Raditz. Toriyama really committed to that bit.</li>
+      <li>The Kamehameha is named after Kamehameha I, the first king of Hawaii. No real connection to the plot, Toriyama just liked how it sounded.</li>
+      <li>Namekians reproduce by spitting out eggs. Piccolo's whole species does this. No further comment.</li>
+      <li>Krillin has one of the highest death counts of any main character in the entire series. The guy cannot catch a break.</li>
+      <li>The famous "It's over 9000!" line is actually a mistranslation — in the original Japanese, Vegeta says 8,000. Nobody's fixing it now, it's too iconic.</li>
+      <li>Piccolo used to be a straight-up villain in the original Dragon Ball before turning into one of the good guys' most reliable mentors.</li>
+    </ul>
+  </section>
 
-    <div class="orb-grid">
-      <article class="orb-card reveal" style="--hue:24">
-        <span class="orb"><span class="orb-stars">★</span></span>
-        <span class="orb-title">Goku</span>
-        <span class="orb-desc">Saiyan raised on Earth. Endlessly cheerful, endlessly hungry, unmatched in a fight.</span>
-      </article>
-      <article class="orb-card reveal" style="--hue:210">
-        <span class="orb"><span class="orb-stars">★★</span></span>
-        <span class="orb-title">Vegeta</span>
-        <span class="orb-desc">Prince of the Saiyans. Pride and rivalry drive him to constantly chase Goku's strength.</span>
-      </article>
-      <article class="orb-card reveal" style="--hue:140">
-        <span class="orb"><span class="orb-stars">★★★</span></span>
-        <span class="orb-title">Piccolo</span>
-        <span class="orb-desc">Namekian warrior turned mentor. Can regenerate limbs and stretch his arms at will.</span>
-      </article>
-      <article class="orb-card reveal" style="--hue:270">
-        <span class="orb"><span class="orb-stars">★★★★</span></span>
-        <span class="orb-title">Gohan</span>
-        <span class="orb-desc">Goku's son. A scholar at heart with hidden potential that keeps surprising everyone.</span>
-      </article>
-      <article class="orb-card reveal" style="--hue:35">
-        <span class="orb"><span class="orb-stars">★★★★★</span></span>
-        <span class="orb-title">Krillin</span>
-        <span class="orb-desc">The strongest human on Earth. Goku's oldest friend and master of the Destructo Disc.</span>
-      </article>
-      <article class="orb-card reveal" style="--hue:290">
-        <span class="orb"><span class="orb-stars">★★★★★★</span></span>
-        <span class="orb-title">Frieza</span>
-        <span class="orb-desc">Galactic tyrant. Deceptively small in his final form, devastating in every one.</span>
-      </article>
-      <article class="orb-card reveal" style="--hue:255">
-        <span class="orb"><span class="orb-stars">★★★★★★★</span></span>
-        <span class="orb-title">Trunks</span>
-        <span class="orb-desc">Half-Saiyan swordsman from a grim future timeline, sent back to change history.</span>
-      </article>
+  <!-- ============ CHARACTERS ============ -->
+  <section class="radar" id="roster">
+    <span class="eyebrow center">Click one</span>
+    <h2 class="center">The characters</h2>
+    <p class="radar-sub center">Tap a card to open it up for more info.</p>
+
+    <div class="orb-grid" id="fighterGrid">
+
+      <div class="fighter-card">
+        <button class="orb-card" style="--hue:24" aria-expanded="false" aria-controls="detail-goku">
+          <span class="orb"><span class="orb-stars">★</span></span>
+          <span class="orb-title">Goku</span>
+          <span class="orb-desc">Saiyan raised on Earth. Cheerful, always hungry, unmatched in a fight.</span>
+        </button>
+        <div class="fighter-detail" id="detail-goku" aria-hidden="true">
+          <dl>
+            <dt>Home</dt><dd>Planet Vegeta (raised on Earth)</dd>
+            <dt>First shows up</dt><dd>Dragon Ball, as a kid — DBZ picks up when he's an adult</dd>
+            <dt>Signature move</dt><dd>Kamehameha</dd>
+            <dt>Random fact</dt><dd>His name is a play on Son Goku, the Monkey King from Journey to the West.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="fighter-card">
+        <button class="orb-card" style="--hue:210" aria-expanded="false" aria-controls="detail-vegeta">
+          <span class="orb"><span class="orb-stars">★★</span></span>
+          <span class="orb-title">Vegeta</span>
+          <span class="orb-desc">Prince of the Saiyans. Pride and rivalry keep him chasing Goku's strength.</span>
+        </button>
+        <div class="fighter-detail" id="detail-vegeta" aria-hidden="true">
+          <dl>
+            <dt>Home</dt><dd>Planet Vegeta</dd>
+            <dt>First shows up</dt><dd>The Saiyan Saga, as the first real villain of DBZ</dd>
+            <dt>Signature move</dt><dd>Galick Gun</dd>
+            <dt>Random fact</dt><dd>He was originally written as a one-arc villain. He got too popular to kill off.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="fighter-card">
+        <button class="orb-card" style="--hue:140" aria-expanded="false" aria-controls="detail-piccolo">
+          <span class="orb"><span class="orb-stars">★★★</span></span>
+          <span class="orb-title">Piccolo</span>
+          <span class="orb-desc">Namekian warrior turned mentor. Regenerates limbs, stretches his arms.</span>
+        </button>
+        <div class="fighter-detail" id="detail-piccolo" aria-hidden="true">
+          <dl>
+            <dt>Home</dt><dd>Namek</dd>
+            <dt>First shows up</dt><dd>End of the original Dragon Ball, as the villain</dd>
+            <dt>Signature move</dt><dd>Special Beam Cannon</dd>
+            <dt>Random fact</dt><dd>He's basically a reincarnation of an earlier, meaner version of himself. Long story.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="fighter-card">
+        <button class="orb-card" style="--hue:270" aria-expanded="false" aria-controls="detail-gohan">
+          <span class="orb"><span class="orb-stars">★★★★</span></span>
+          <span class="orb-title">Gohan</span>
+          <span class="orb-desc">Goku's son. Scholar at heart, hidden potential that keeps surprising everyone.</span>
+        </button>
+        <div class="fighter-detail" id="detail-gohan" aria-hidden="true">
+          <dl>
+            <dt>Home</dt><dd>Earth</dd>
+            <dt>First shows up</dt><dd>Right at the start of DBZ, as a kid</dd>
+            <dt>Signature move</dt><dd>Masenko</dd>
+            <dt>Random fact</dt><dd>For a stretch during the Cell Saga, he was arguably the strongest fighter in the whole show.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="fighter-card">
+        <button class="orb-card" style="--hue:35" aria-expanded="false" aria-controls="detail-krillin">
+          <span class="orb"><span class="orb-stars">★★★★★</span></span>
+          <span class="orb-title">Krillin</span>
+          <span class="orb-desc">Strongest human on Earth. Goku's oldest friend, master of the Destructo Disc.</span>
+        </button>
+        <div class="fighter-detail" id="detail-krillin" aria-hidden="true">
+          <dl>
+            <dt>Home</dt><dd>Earth</dd>
+            <dt>First shows up</dt><dd>Original Dragon Ball, as Goku's rival at Master Roshi's school</dd>
+            <dt>Signature move</dt><dd>Destructo Disc</dd>
+            <dt>Random fact</dt><dd>He's died more times than just about anyone else in the main cast.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="fighter-card">
+        <button class="orb-card" style="--hue:290" aria-expanded="false" aria-controls="detail-frieza">
+          <span class="orb"><span class="orb-stars">★★★★★★</span></span>
+          <span class="orb-title">Frieza</span>
+          <span class="orb-desc">Galactic tyrant. Deceptively small in his final form, devastating in every one.</span>
+        </button>
+        <div class="fighter-detail" id="detail-frieza" aria-hidden="true">
+          <dl>
+            <dt>Home</dt><dd>Rules over a huge chunk of the universe, no fixed homeworld</dd>
+            <dt>First shows up</dt><dd>The Namek Saga</dd>
+            <dt>Signature move</dt><dd>Death Beam</dd>
+            <dt>Random fact</dt><dd>He's the one who destroyed planet Vegeta and wiped out most of the Saiyans.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="fighter-card">
+        <button class="orb-card" style="--hue:255" aria-expanded="false" aria-controls="detail-trunks">
+          <span class="orb"><span class="orb-stars">★★★★★★★</span></span>
+          <span class="orb-title">Trunks</span>
+          <span class="orb-desc">Half-Saiyan swordsman from a grim future timeline, sent back to change history.</span>
+        </button>
+        <div class="fighter-detail" id="detail-trunks" aria-hidden="true">
+          <dl>
+            <dt>Home</dt><dd>Earth, an alternate future timeline</dd>
+            <dt>First shows up</dt><dd>The Trunks Saga, warning everyone about the Androids</dd>
+            <dt>Signature move</dt><dd>Burning Attack</dd>
+            <dt>Random fact</dt><dd>He travels back in time using a machine his mom, Bulma, built.</dd>
+          </dl>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="signal" id="contact">
+  <!-- ============ GAME CALLOUT ============ -->
+  <section class="game-callout reveal">
+    <div class="game-callout-inner">
+      <span class="eyebrow">Bored?</span>
+      <h2>I made a clicker game</h2>
+      <p>Tap to earn power, buy training upgrades, go way past 9000. It's got a save file and everything.</p>
+      <a href="game.html" class="power-btn">Play the game</a>
+    </div>
+  </section>
+
+  <!-- ============ DISCORD ============ -->
+  <section class="signal" id="discord">
     <div class="signal-inner reveal">
-      <span class="eyebrow">Open Channel</span>
-      <h2>Send a Signal</h2>
-      <p>Swap these for your real links.</p>
+      <span class="eyebrow">Come hang out</span>
+      <h2>Join the Discord</h2>
+      <p>Argue about power levels, post your favorite fights, whatever. Everyone's welcome.</p>
       <div class="signal-links">
-        <a href="mailto:you@example.com">Email</a>
-        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://discord.gg/" target="_blank" rel="noopener">Discord</a>
+        <a href="https://discord.gg/your-invite" target="_blank" rel="noopener">Join the server</a>
       </div>
     </div>
   </section>
@@ -166,7 +266,7 @@
 </main>
 
 <footer class="site-foot">
-  <p>Fan-made — not affiliated with Toei Animation, Shueisha, or Akira Toriyama's estate. &copy; <span id="year"></span></p>
+  <p>Fan-made, not affiliated with Toei Animation, Shueisha, or Akira Toriyama's estate. &copy; <span id="year"></span></p>
 </footer>
 
 <script src="script.js"></script>
