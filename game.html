@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Training — DBZ Fansite</title>
+<meta name="description" content="A power-training clicker game. Tap to train, buy upgrades, save your progress.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+<div class="aura-field" aria-hidden="true">
+  <div class="aura-ring ring-1"></div>
+  <div class="aura-ring ring-2"></div>
+  <div class="aura-ring ring-3"></div>
+</div>
+
+<header class="site-nav">
+  <a href="index.html" class="brand">DBZ<span>FANSITE</span></a>
+  <nav aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="index.html#roster">Characters</a>
+    <a href="index.html#discord">Discord</a>
+  </nav>
+</header>
+
+<main class="game-shell">
+
+  <!-- ============ CLICK PANEL ============ -->
+  <section class="click-panel">
+    <a href="index.html" class="game-back">← back to the site</a>
+
+    <div class="score-display">
+      <span class="score-value" id="scoreValue">0</span>
+      <span class="score-label">Power</span>
+      <span class="score-sub" id="scoreRate">0 power / sec</span>
+    </div>
+
+    <div class="click-zone">
+      <button class="click-orb" id="clickOrb" type="button" aria-label="Train — tap to gain power">
+        TRAIN
+      </button>
+      <div class="float-layer" id="floatLayer" aria-hidden="true"></div>
+    </div>
+
+    <p class="click-power">
+      Per tap: <strong id="clickPowerValue">1</strong>
+    </p>
+
+    <div class="prestige-box">
+      <h3>Fuse with Kaioken</h3>
+      <p>
+        Reset your power and generators for a permanent multiplier based on
+        everything you've earned so far. Only worth it once you've built up
+        a decent amount.
+      </p>
+      <button class="prestige-btn" id="prestigeBtn" type="button" disabled>
+        Fuse (need more power first)
+      </button>
+      <br>
+      <button class="reset-link" id="resetBtn" type="button">wipe save file</button>
+    </div>
+  </section>
+
+  <!-- ============ SHOP ============ -->
+  <section class="shop-panel-wrap">
+    <div class="shop-tabs" role="tablist" aria-label="Shop categories">
+      <button class="shop-tab active" data-tab="generators" role="tab" aria-selected="true">Training Sources</button>
+      <button class="shop-tab" data-tab="upgrades" role="tab" aria-selected="false">Upgrades</button>
+      <button class="shop-tab" data-tab="achievements" role="tab" aria-selected="false">Achievements</button>
+    </div>
+
+    <div class="shop-panel active" id="panel-generators" data-panel="generators"></div>
+    <div class="shop-panel" id="panel-upgrades" data-panel="upgrades"></div>
+    <div class="shop-panel" id="panel-achievements">
+      <div class="achievement-grid" id="achievementGrid"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <p>Fan-made, not affiliated with Toei Animation, Shueisha, or Akira Toriyama's estate. &copy; <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
