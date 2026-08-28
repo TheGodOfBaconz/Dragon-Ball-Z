@@ -28,13 +28,17 @@ function setupScouter(prefersReducedMotion) {
   const btn = document.getElementById("powerBtn");
   if (!valueEl || !classEl || !btn) return;
 
-  // Edit these thresholds/labels to fit your own site's voice.
+  // Maps a scanned reading to a Z-Fighter. Edit freely — add characters,
+  // change the cutoffs, whatever fits your own roster.
   const classifications = [
-    { max: 5, label: "— standby —" },
-    { max: 100, label: "civilian range" },
-    { max: 1000, label: "trained fighter" },
-    { max: 9000, label: "elite class" },
-    { max: Infinity, label: "off the charts" },
+    { max: 150, label: "you're a Saibaman" },
+    { max: 1200, label: "you're Krillin" },
+    { max: 3000, label: "you're Gohan (suppressed)" },
+    { max: 4000, label: "you're Piccolo" },
+    { max: 6000, label: "you're Goku (base form)" },
+    { max: 8000, label: "you're Vegeta (Super Saiyan)" },
+    { max: 9000, label: "you're Goku (Super Saiyan)" },
+    { max: Infinity, label: "IT'S OVER 9000 — Broly-tier" },
   ];
 
   function classify(n) {
@@ -46,7 +50,8 @@ function setupScouter(prefersReducedMotion) {
     btn.textContent = "Scanning...";
     valueEl.classList.remove("overload");
 
-    const target = Math.floor(Math.random() * 8500) + 500; // 500–9000
+    // Occasionally breaks past 9000 for the classic gag.
+    const target = Math.floor(Math.random() * 9400) + 100; // 100–9500
     const duration = prefersReducedMotion ? 0 : 1400;
 
     if (duration === 0) {
