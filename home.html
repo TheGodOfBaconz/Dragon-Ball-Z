@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Power Level: Unlimited</title>
-<meta name="description" content="A Saiyan-powered personal site — training log, project radar, and a scouter that never lies.">
+<title>Power Level: Unlimited — A Dragon Ball Z Fan Page</title>
+<meta name="description" content="A Dragon Ball Z fan page — character facts, a power tier breakdown, and a scouter that tells you which Z-Fighter you are.">
 
 <!-- Fonts: a condensed impact face for headlines, a HUD-flavored sans for body/UI -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petto:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
@@ -26,8 +25,8 @@
 <header class="site-nav">
   <a href="#top" class="brand">POWER<span>LEVEL</span></a>
   <nav aria-label="Primary">
-    <a href="#log">Training Log</a>
-    <a href="#radar">Dragon Radar</a>
+    <a href="#log">Trivia</a>
+    <a href="#radar">Fighter Roster</a>
     <a href="#contact">Signal</a>
   </nav>
 </header>
@@ -36,7 +35,7 @@
 
   <!-- ============ HERO / SCOUTER ============ -->
   <section class="hero" id="hero">
-    <div class="scouter-hud" role="group" aria-label="Power level scanner">
+    <div class="scouter-hud" role="group" aria-label="Z-Fighter power scanner">
       <div class="scouter-lens">
         <div class="scouter-crosshair" aria-hidden="true"></div>
         <span class="scouter-label">SCANNING TARGET</span>
@@ -44,105 +43,109 @@
         <span class="scouter-class" id="scouterClass">— STANDBY —</span>
       </div>
       <button class="power-btn" id="powerBtn" type="button">
-        Power Up
+        Scan My Power
       </button>
+      <p class="scouter-hint">Find out which Z-Fighter your power level matches.</p>
     </div>
 
     <h1 class="hero-title">
-      PUSH PAST<br>
-      <span class="ki-text">YOUR LIMIT</span>
+      DRAGON BALL Z<br>
+      <span class="ki-text">FAN ZONE</span>
     </h1>
     <p class="hero-sub">
-      Welcome to my corner of the universe — built one training arc at a time.
-      Replace this line with your own tagline.
+      A tribute to the Z-Fighters — trivia, power tiers, and a roster of the
+      warriors who've spent decades screaming their way through transformations.
     </p>
-    <a href="#log" class="scroll-cue" aria-label="Scroll to training log">▾</a>
+    <a href="#log" class="scroll-cue" aria-label="Scroll to trivia">▾</a>
   </section>
 
-  <!-- ============ ABOUT / TRAINING LOG ============ -->
+  <!-- ============ TRIVIA / POWER TIERS ============ -->
   <section class="log" id="log">
     <div class="log-copy reveal">
-      <span class="eyebrow">Training Log</span>
-      <h2>About the Fighter</h2>
+      <span class="eyebrow">Series Trivia</span>
+      <h2>Spotlight: Goku</h2>
       <p>
-        Swap this paragraph for your own bio. Talk about what you build,
-        what you're learning, or what arc you're currently grinding through.
-        The stat panel to the side is fully editable in <code>index.html</code> —
-        change the labels, values, and bar widths to whatever fits you.
+        Goku was born Kakarot on the planet Vegeta and sent to Earth as an
+        infant, where a childhood head injury wiped out the aggressive
+        Saiyan instincts he was meant to grow up with. Raised by Grandpa
+        Gohan, he became Earth's most unlikely protector — and its most
+        enthusiastic eater.
       </p>
       <p>
-        This template ships lean: three files, no build step, no framework.
-        Drop it straight into a GitHub Pages repo and go.
+        His signature move, the Kamehameha, was taught to him by Master
+        Roshi. Goku would go on to popularize the Super Saiyan
+        transformation, a golden-haired power surge that changed the shape
+        of the entire franchise.
       </p>
     </div>
 
-    <div class="stat-panel reveal" aria-label="Stat sheet">
+    <div class="stat-panel reveal" aria-label="Illustrative power tier chart">
+      <span class="stat-panel-title">Power Tiers (illustrative, not canon numbers)</span>
       <div class="stat-row">
-        <span class="stat-name">Power Level</span>
-        <div class="stat-bar"><div class="stat-fill" style="--pct:92%"></div></div>
-        <span class="stat-num">92</span>
+        <span class="stat-name">Base Form</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:20%"></div></div>
       </div>
       <div class="stat-row">
-        <span class="stat-name">Focus</span>
-        <div class="stat-bar"><div class="stat-fill" style="--pct:78%"></div></div>
-        <span class="stat-num">78</span>
+        <span class="stat-name">Kaioken</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:45%"></div></div>
       </div>
       <div class="stat-row">
-        <span class="stat-name">Speed</span>
-        <div class="stat-bar"><div class="stat-fill" style="--pct:85%"></div></div>
-        <span class="stat-num">85</span>
+        <span class="stat-name">Super Saiyan</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:70%"></div></div>
       </div>
       <div class="stat-row">
-        <span class="stat-name">Discipline</span>
-        <div class="stat-bar"><div class="stat-fill" style="--pct:97%"></div></div>
-        <span class="stat-num">97</span>
+        <span class="stat-name">Super Saiyan God</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:88%"></div></div>
+      </div>
+      <div class="stat-row">
+        <span class="stat-name">Ultra Instinct</span>
+        <div class="stat-bar"><div class="stat-fill" style="--pct:100%"></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PROJECTS / DRAGON RADAR ============ -->
+  <!-- ============ FIGHTER ROSTER ============ -->
   <section class="radar" id="radar">
-    <span class="eyebrow center">Dragon Radar</span>
-    <h2 class="center">Projects Located</h2>
-    <p class="radar-sub center">Seven signals detected. Each one grants a wish — click to view.</p>
+    <span class="eyebrow center">Fighter Roster</span>
+    <h2 class="center">Seven Z-Fighters</h2>
+    <p class="radar-sub center">A quick-fact roster of the series' core cast.</p>
 
     <div class="orb-grid">
-      <!-- Repeat/edit this article block per project. data-stars sets the star count 1–7 -->
-      <a class="orb-card reveal" href="#" data-stars="1">
-        <span class="orb" style="--n:1"><span class="orb-stars">★</span></span>
-        <span class="orb-title">Project One</span>
-        <span class="orb-desc">One-line description of what it does.</span>
-      </a>
-      <a class="orb-card reveal" href="#" data-stars="2">
-        <span class="orb" style="--n:2"><span class="orb-stars">★★</span></span>
-        <span class="orb-title">Project Two</span>
-        <span class="orb-desc">One-line description of what it does.</span>
-      </a>
-      <a class="orb-card reveal" href="#" data-stars="3">
-        <span class="orb" style="--n:3"><span class="orb-stars">★★★</span></span>
-        <span class="orb-title">Project Three</span>
-        <span class="orb-desc">One-line description of what it does.</span>
-      </a>
-      <a class="orb-card reveal" href="#" data-stars="4">
-        <span class="orb" style="--n:4"><span class="orb-stars">★★★★</span></span>
-        <span class="orb-title">Project Four</span>
-        <span class="orb-desc">One-line description of what it does.</span>
-      </a>
-      <a class="orb-card reveal" href="#" data-stars="5">
-        <span class="orb" style="--n:5"><span class="orb-stars">★★★★★</span></span>
-        <span class="orb-title">Project Five</span>
-        <span class="orb-desc">One-line description of what it does.</span>
-      </a>
-      <a class="orb-card reveal" href="#" data-stars="6">
-        <span class="orb" style="--n:6"><span class="orb-stars">★★★★★★</span></span>
-        <span class="orb-title">Project Six</span>
-        <span class="orb-desc">One-line description of what it does.</span>
-      </a>
-      <a class="orb-card reveal" href="#" data-stars="7">
-        <span class="orb" style="--n:7"><span class="orb-stars">★★★★★★★</span></span>
-        <span class="orb-title">Project Seven</span>
-        <span class="orb-desc">One-line description of what it does.</span>
-      </a>
+      <article class="orb-card reveal" style="--hue:24">
+        <span class="orb"><span class="orb-stars">★</span></span>
+        <span class="orb-title">Goku</span>
+        <span class="orb-desc">Saiyan raised on Earth. Endlessly cheerful, endlessly hungry, unmatched in a fight.</span>
+      </article>
+      <article class="orb-card reveal" style="--hue:210">
+        <span class="orb"><span class="orb-stars">★★</span></span>
+        <span class="orb-title">Vegeta</span>
+        <span class="orb-desc">Prince of the Saiyans. Pride and rivalry drive him to constantly chase Goku's strength.</span>
+      </article>
+      <article class="orb-card reveal" style="--hue:140">
+        <span class="orb"><span class="orb-stars">★★★</span></span>
+        <span class="orb-title">Piccolo</span>
+        <span class="orb-desc">Namekian warrior turned mentor. Can regenerate limbs and stretch his arms at will.</span>
+      </article>
+      <article class="orb-card reveal" style="--hue:270">
+        <span class="orb"><span class="orb-stars">★★★★</span></span>
+        <span class="orb-title">Gohan</span>
+        <span class="orb-desc">Goku's son. A scholar at heart with hidden potential that keeps surprising everyone.</span>
+      </article>
+      <article class="orb-card reveal" style="--hue:35">
+        <span class="orb"><span class="orb-stars">★★★★★</span></span>
+        <span class="orb-title">Krillin</span>
+        <span class="orb-desc">The strongest human on Earth. Goku's oldest friend and master of the Destructo Disc.</span>
+      </article>
+      <article class="orb-card reveal" style="--hue:290">
+        <span class="orb"><span class="orb-stars">★★★★★★</span></span>
+        <span class="orb-title">Frieza</span>
+        <span class="orb-desc">Galactic tyrant. Deceptively small in his final form, devastating in every one.</span>
+      </article>
+      <article class="orb-card reveal" style="--hue:255">
+        <span class="orb"><span class="orb-stars">★★★★★★★</span></span>
+        <span class="orb-title">Trunks</span>
+        <span class="orb-desc">Half-Saiyan swordsman from a grim future timeline, sent back to change history.</span>
+      </article>
     </div>
   </section>
 
@@ -163,7 +166,7 @@
 </main>
 
 <footer class="site-foot">
-  <p>Built with zero frameworks and one training montage. &copy; <span id="year"></span></p>
+  <p>Fan-made — not affiliated with Toei Animation, Shueisha, or Akira Toriyama's estate. &copy; <span id="year"></span></p>
 </footer>
 
 <script src="script.js"></script>
