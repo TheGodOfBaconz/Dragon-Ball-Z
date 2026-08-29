@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   footerYear();
   setupScouter(prefersReducedMotion);
   setupRevealOnScroll(prefersReducedMotion);
+  setupFighterCards();
 });
 
 /* ---------------- Footer year ---------------- */
@@ -134,4 +135,40 @@ function setupRevealOnScroll(prefersReducedMotion) {
     );
     statObserver.observe(statPanel);
   }
+}
+
+/* ---------------- Character card expand/collapse ---------------- */
+
+function setupFighterCards() {
+  const cards = document.querySelectorAll(".orb-card");
+  if (!cards.length) return;
+
+  cards.forEach((btn) => {
+    const detail = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!detail) return;
+
+    btn.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+      // Close any other open card so only one is expanded at a time.
+      cards.forEach((otherBtn) => {
+        if (otherBtn === btn) return;
+        const otherDetail = document.getElementById(otherBtn.getAttribute("aria-controls"));
+        if (!otherDetail) return;
+        otherBtn.setAttribute("aria-expanded", "false");
+        otherDetail.setAttribute("aria-hidden", "true");
+        otherDetail.style.maxHeight = "0px";
+      });
+
+      if (isOpen) {
+        btn.setAttribute("aria-expanded", "false");
+        detail.setAttribute("aria-hidden", "true");
+        detail.style.maxHeight = "0px";
+      } else {
+        btn.setAttribute("aria-expanded", "true");
+        detail.setAttribute("aria-hidden", "false");
+        detail.style.maxHeight = detail.scrollHeight + "px";
+      }
+    });
+  });
 }
